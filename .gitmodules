@@ -1,0 +1,7 @@
+[submodule "sparsebundlefs"]
+	path = sparsebundlefs
+	url = https://github.com/torarnv/sparsebundlefs.git
+[submodule "tmfs"]
+	path = tmfs
+	url = https://github.com/iburinoc/tmfs.git
+	branch = allow-relative-hfs-path
