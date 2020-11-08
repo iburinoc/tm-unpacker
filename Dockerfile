@@ -27,7 +27,14 @@ RUN apk --no-cache add \
     libgcc \
     libstdc++ \
     fuse \
-    bash
+    bash \
+    parted
 
 COPY --from=tmfs /build/tmfs /bin
 COPY --from=sparsebundlefs /app/sparsebundlefs /bin
+
+RUN mkdir /image /hfs /tm /bind
+
+ADD entry.sh /app/
+
+ENTRYPOINT ["/app/entry.sh"]
